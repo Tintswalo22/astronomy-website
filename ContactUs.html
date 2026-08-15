@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>GreenLinkLogistics</title>
+<style>
+	   body{
+             background: url('Images/galaxy.png');
+            background-size: cover;  
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            }
+        body:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 180%;
+            background: rgba(0, 0, 0, 0.6); 
+            z-index: -1;
+            }
+        label {
+            color: lightyellow;
+            font-weight: bold; 
+          }
+          .pulse {
+    animation: pulse 0.4s ease;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  .feedback-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0A5826;
+    color: lightyellow;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 999;
+    font-weight: bold;
+    animation: fadeinout 2.5s ease-in-out;
+  }
+
+  @keyframes fadeinout {
+    0% { opacity: 0; bottom: 0px; }
+    10% { opacity: 1; bottom: 30px; }
+    90% { opacity: 1; }
+    100% { opacity: 0; bottom: 60px; }
+  }
+	</style>
+</head>
+<body class="contact-page">
+<div class = "content">
+<div class="header"> 
+<img src="Images/loggo.png" width="170" height="150" alt="GreenLink Logistics Logo">
+            <h1>DETRONOMIO galaxy</h1>
+            <h2>Explore the Universe, Inspire the Future</h2>
+         
+            <a href="index.html" class="button1">HOME</a>
+            <a href="learn.html" class="button2">LEARN</a>
+            <a href="AboutUs.html" class="button3">ABOUT US</a>
+            <a href="ContactUs.html" class="button4">CONTACT US</a>
+        </div> 
+<div class="centered-text">
+  Welcome to the Contact Us page.
+<h1>Contact Us:</h1>
+📍Location: cunningmoore b
+<br><br>
+🌐 www.detroAstro.com
+<br><br>
+☎ Call us: +27 67 155 1939
+<br><br>
+📧 Email us: learnwithdetro@gmail.com 
+<br><br>
+🕗 Monday - Friday: 8AM to 3PM
+<br><br>
+🕗 Saturday & Sunday: Closed
+<br><br>
+<hr>
+<br><br>
+<div class="review-section" style="color: lightyellow; max-width: 500px; margin: auto; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px;">
+  <h2>Leave a Review:</h2>
+  <form id="review-form">
+    <label for="name" style="color: lightyellow;">Your Name:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+    <label for="comment" style="color: lightyellow;">Your Comment:</label><br>
+    <textarea id="comment" name="comment" rows="4" required style="width: 100%; padding: 8px;"></textarea><br><br>
+
+    <button type="submit" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #0A5826; color: lightyellow;">Submit Review</button>
+  </form>
+
+  <div id="review-output" style="margin-top: 20px;"></div>
+</div>
+
+<br><br>
+<hr>
+<br>
+
+</div>
+<script>
+  document.getElementById("review-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const comment = document.getElementById("comment").value.trim();
+
+    if (name === "" || comment === "") return;
+
+    const reviewId = Date.now();
+
+    const reviewDiv = document.createElement("div");
+    reviewDiv.dataset.reviewId = reviewId;
+    reviewDiv.style.marginTop = "15px";
+    reviewDiv.style.padding = "10px";
+    reviewDiv.style.border = "1px solid lightyellow";
+    reviewDiv.style.borderRadius = "10px";
+    reviewDiv.style.backgroundColor = "rgba(255,255,255,0.15)";
+    reviewDiv.innerHTML = `
+      <strong style="color: gold;">${name} says:</strong>
+      <p>${comment}</p>
+      <button class="like-btn" style="background: green; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-right: 10px;">
+        <i class="fa fa-thumbs-up"></i> <span class="like-count">0</span>
+      </button>
+      <button class="dislike-btn" style="background: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+        <i class="fa fa-thumbs-down"></i> <span class="dislike-count">0</span>
+      </button>
+    `;
+
+    const output = document.getElementById("review-output");
+    output.prepend(reviewDiv);
+
+    const likeBtn = reviewDiv.querySelector(".like-btn");
+    const dislikeBtn = reviewDiv.querySelector(".dislike-btn");
+    const likeCount = reviewDiv.querySelector(".like-count");
+    const dislikeCount = reviewDiv.querySelector(".dislike-count");
+
+    let liked = false;
+    let disliked = false;
+
+    likeBtn.addEventListener("click", () => {
+      if (!liked && !disliked) {
+        likeCount.textContent = parseInt(likeCount.textContent) + 1;
+        likeBtn.classList.add("pulse");
+        liked = true;
+        setTimeout(() => likeBtn.classList.remove("pulse"), 400);
+      }
+    });
+
+    dislikeBtn.addEventListener("click", () => {
+      if (!disliked && !liked) {
+        dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+        dislikeBtn.classList.add("pulse");
+        disliked = true;
+        setTimeout(() => dislikeBtn.classList.remove("pulse"), 400);
+      }
+    });
+
+    const toast = document.createElement("div");
+    toast.className = "feedback-toast";
+    toast.innerText = "🎉 Thanks for the feedback!";
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2500);
+
+    document.getElementById("review-form").reset();
+  });
+</script>
+</body>
+</html>

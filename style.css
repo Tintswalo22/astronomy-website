@@ -1,0 +1,459 @@
+.home-page-container { 
+    display: flex; 
+    align-items: center;  
+    justify-content: space-between; 
+    padding: 48px 80px; 
+    color: white; 
+} 
+ 
+.home-page-text { 
+    flex: 1; 
+    padding-right: 20px; 
+    margin-bottom: 2rem; 
+} 
+ 
+.image-container { 
+    flex-shrink: 0;  
+} 
+ 
+.home-page-img { 
+    height: 370px; 
+    width: 510px; 
+    border-radius: 10px; 
+} 
+
+
+/* ABOUT US SECTION */
+
+.about-us-section { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 70px; 
+    padding: 40px 20px; 
+    flex-wrap: wrap; 
+} 
+ 
+.about-us-section.reverse { 
+    flex-direction: row-reverse; 
+} 
+ 
+.about-us-image, 
+.about-us-video { 
+    width: 35%; 
+    height: auto; 
+    border-radius: 10px; 
+    object-fit: cover; 
+} 
+ 
+.about-us-text { 
+    width: 45%; 
+    font-size: 1rem; 
+    color: white; 
+    line-height: 1.6; 
+} 
+
+
+/* ASTRONOMY SECTION */
+
+.astronomy-section { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 50px; 
+    padding: 80px; 
+    color: white;
+} 
+ 
+.astronomy-section .image { 
+    width: 45%; 
+} 
+ 
+.astronomy-section .image img { 
+    width: 100%; 
+    border-radius: 15px; 
+} 
+ 
+.astronomy-section .text { 
+    width: 50%; 
+    color: white;
+} 
+
+
+/* SIGN UP / CONTACT CONTAINER */
+
+.signup-container { 
+    background-color: #061A40; 
+    padding: 2rem; 
+    border: 3px solid #061A40; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+    width: 300px; 
+    margin: 3rem auto; 
+    position: relative; 
+} 
+ 
+.signup-container h2 { 
+    color: white; 
+    text-align: center; 
+    margin-bottom: 1rem; 
+} 
+
+
+/* FORM LABELS */
+
+label { 
+    display: block; 
+    margin: 0.5rem 0 0.2rem; 
+    color: white;  
+} 
+
+
+/* FORM INPUTS */
+
+input[type="text"], 
+input[type="number"], 
+input[type="country"], 
+input[type="email"], 
+input[type="password"] { 
+    width: 100%; 
+    padding: 0.5rem; 
+    border: 1px solid #061A40; 
+    border-radius: 5px; 
+    margin-bottom: 1rem; 
+    box-sizing: border-box;
+} 
+
+
+/* BUTTON */
+
+button { 
+    background-color: #061A40; 
+    color: white; 
+    padding: 0.6rem; 
+    border: none; 
+    border-radius: 5px; 
+    width: 100%; 
+    cursor: pointer; 
+    font-weight: bold; 
+} 
+ 
+button:hover { 
+    background-color: white; 
+    color: #061A40; 
+} 
+
+
+/* CENTERED TEXT */
+
+.centered-text { 
+    text-align: center; 
+    color: white; 
+    padding: 50px; 
+} 
+
+
+/* PRODUCTS BOX */
+
+.products-box {  
+    position: relative; 
+    height: 100px; 
+} 
+ 
+.products-images { 
+    display: flex; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 50px; 
+    left: 60px; 
+    gap: 80px;   
+} 
+ 
+.products-images-2 { 
+    display: flex; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 50px; 
+    left: 820px; 
+    gap: 80px;    
+} 
+ 
+.products-images img, 
+.products-images-2 img { 
+    height: 200px; 
+    width: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+} 
+
+
+/* VERTICAL LINE */
+
+.vertical-line { 
+    position: absolute; 
+    top: 30px;    
+    left: 725px;                 
+    height: 1380px;          
+    width: 2px;            
+    background-color: #061A40; 
+} 
+
+
+/* NAVIGATION BUTTONS */
+
+.button1, 
+.button2, 
+.button3, 
+.button4 { 
+    padding: 15px 15px; 
+    letter-spacing: 2px; 
+    text-decoration: none; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 10px; 
+    cursor: pointer; 
+    background: inherit; 
+    margin: 10px 0 0 30px; 
+    transition: all 0.3s ease; 
+    transform: scale(1); 
+} 
+ 
+.button1:hover, 
+.button2:hover, 
+.button3:hover, 
+.button4:hover { 
+    transform: scale(1.10);  
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);  
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+} 
+
+
+/* SHOP / MAIN BUTTON */
+
+.shop-now-button { 
+    padding: 10px 15px; 
+    letter-spacing: 2px; 
+    text-decoration: none; 
+    color: white; 
+    font-weight: normal; 
+    font-size: 13px; 
+    cursor: pointer; 
+    border: none; 
+    background: #061A40; 
+    margin: 10px 0 0 30px; 
+    transition: all 0.3s ease; 
+} 
+ 
+.shop-now-button:hover { 
+    background-color: white; 
+    color: #061A40; 
+} 
+
+
+/* HEADER */
+
+.header { 
+    color: white; 
+    background-color: #061A40; 
+    opacity: 0.9;  
+    padding: 0px; 
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    border-radius: 15px; 
+} 
+ 
+.header img { 
+    opacity: 0.9;  
+    width: 180px; 
+    height: auto; 
+    margin-right: 10px; 
+    flex-shrink: 0;  
+    border-radius: 20px; 
+}            
+ 
+.header h1 { 
+    font-size: 30px; 
+    margin: 0px; 
+    font-weight: bold; 
+    color: white;
+} 
+ 
+.header h2 { 
+    font-size: 21px; 
+    margin: 0px 0 0 35px;  
+    color: white;
+} 
+ 
+.header h3 { 
+    font-size: 14px; 
+    margin: 0px 0 0 12px; 
+    color: white;
+} 
+
+
+/* CONTENT */
+
+.content { 
+    padding: 20px; 
+    color: white; 
+    font-family: 'Segoe UI', sans-serif; 
+}     
+
+
+/* MOVE RIGHT */
+
+.move-right { 
+    margin-left: 50px; 
+}  
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) { 
+
+    .header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+    } 
+
+    .header img { 
+        margin-bottom: 10px; 
+    } 
+ 
+    .button { 
+        margin: 10px 0 0 0; 
+    } 
+
+    .header h1, 
+    .header h2, 
+    .header h3 { 
+        margin-left: 0; 
+    } 
+
+    .astronomy-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .astronomy-section .image,
+    .astronomy-section .text {
+        width: 100%;
+    }
+
+    .about-us-image,
+    .about-us-video,
+    .about-us-text {
+        width: 100%;
+    }
+
+    .comparison-container {
+        flex-direction: column;
+    }
+
+    .comparison-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+} 
+
+
+/* SOCIAL MEDIA LINKS */
+
+.social-links { 
+    position: relative; 
+    z-index: 1; 
+    display: flex; 
+    gap: 50px; 
+    justify-content: center; 
+    margin-top: 0px; 
+    padding: 50px; 
+} 
+ 
+.social-links a { 
+    color: white; 
+    font-size: 24px; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 20%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;  
+    text-decoration: none; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+} 
+ 
+.social-links a:hover { 
+    transform: scale(1.1); 
+} 
+
+
+/* SOCIAL MEDIA COLOURS */
+
+.contact-page .social-links .facebook { 
+    background-color: #0866FF; 
+} 
+
+.contact-page .social-links .x { 
+    background-color: #000; 
+} 
+
+.contact-page .social-links .instagram { 
+    background-color: #E4405F; 
+}
+
+
+/* COMPARISON SECTION */
+
+.comparison { 
+    text-align: center; 
+    padding: 80px 10%; 
+    color: white;
+} 
+ 
+.comparison h2 { 
+    font-size: 35px; 
+    margin-bottom: 15px; 
+    color: white;
+} 
+ 
+.comparison-intro { 
+    font-size: 18px; 
+    margin-bottom: 40px; 
+    color: white;
+} 
+ 
+.comparison-container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 40px; 
+} 
+ 
+.comparison-card { 
+    width: 45%; 
+    padding: 30px; 
+    border-radius: 15px; 
+    background: rgba(6, 26, 64, 0.75); 
+    text-align: left; 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    color: white;
+    transition: 0.3s ease;
+} 
+ 
+.comparison-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+} 
+ 
+.comparison-card h3 { 
+    font-size: 27px; 
+    margin-bottom: 20px; 
+    color: white;
+} 
+ 
+.comparison-card p { 
+    font-size: 17px; 
+    line-height: 1.6; 
+    color: white;
+}
